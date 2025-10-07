@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonam's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="nav-item" onclick="showSection('home')"><span>Home</span></div>
+    <div class="nav-item" onclick="showSection('about','#FF6B6B')">
+      <div class="progress" id="progress-about"></div>
+      <span>About Me</span>
+    </div>
+    <div class="nav-item" onclick="showSection('education','#4ECDC4')">
+      <div class="progress" id="progress-education"></div>
+      <span>Education</span>
+    </div>
+    <div class="nav-item" onclick="showSection('skills','#FFD93D')">
+      <div class="progress" id="progress-skills"></div>
+      <span>Skills</span>
+    </div>
+    <div class="nav-item" onclick="showSection('projects','#6A4C93')">
+      <div class="progress" id="progress-projects"></div>
+      <span>Projects</span>
+    </div>
+    <div class="nav-item" onclick="showSection('contact','#FF6B6B')">
+      <div class="progress" id="progress-contact"></div>
+      <span>Contact</span>
+    </div>
+  </div>
+
+  <!-- Dark/Light Mode Button (only sidebar/cards) -->
+  <button id="modeToggle" class="mode-btn">🌙 Dark Mode</button>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Home Section -->
+    <section id="home" class="section" style="background-image:url('images/home.jpg');">
+      <div class="home-overlay">
+        <h1>Hello, welcome!</h1>
+        <p>Web Developer & Creative Thinker - Turning ideas into interactive digital experiences.</p>
+        <a href="#about" class="btn-explore" onclick="showSection('about','#FF6B6B')">Explore My Portfolio</a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section" style="background-image:url('images/about_bg.jpg');">
+      <div class="overlay">
+        <div class="card about-flex">
+          <div class="about-img">
+            <img src="images/about.jpg" class="circle-img" alt="About Me">
+          </div>
+          <div class="about-text">
+            <h1>About Me</h1>
+            <p style="font-size:14px;" id="about-text">Hi, my name is Sonam, and I come from the tranquil village of Sakteng in Trashigang, a place where nature’s 
+                beauty feels woven into every corner of life. From an early age, I have been drawn to activities that allow me to connect with 
+                the world around me like trekking through lush trails, capturing moments and emotions through drawing, and traveling to new places to experience diverse cultures and landscapes. 
+                <span class="more-text" style="display:none;">These passions are not just hobbies; they are ways for me to understand myself better and to reflect on life from different perspectives. 
+                    I am deeply motivated by the idea of finding inner peace and clarity, often seeking solace in the quiet moments of solo journeys through nature. For me, these explorations are more than adventures, 
+                    they are paths to stillness, self-discovery, and freedom from the relentless pace of modern life.</span></p>
+            <button class="see-more-btn" onclick="toggleSeeMore('about')">See More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section" style="background-image:url('images/education_bg.jpg');">
+      <div class="overlay-education">
+        <h1>My Education Journey</h1>
+        <div class="card education-card">
+          <div class="education-container">
+            <div class="school">
+              <img src="images/sakteng.jpg" alt="Sakteng LSS">
+              <h3>Sakteng Lower Secondary School</h3>
+              <p>This is where my learning journey began, building a strong foundation (class PP-8).</p>
+              <a href="https://www.facebook.com/tg.saktenglss/" target="_blank" class="explore-link">Explore More</a>
+            </div>
+            <div class="school">
+              <img src="images/dungtse.jpg" alt="Dungtse CS">
+              <h3>Dungtse Central School</h3>
+              <p>Here I explored new subjects and developed interest in ICT (9-10).</p>
+              <a href="https://www.facebook.com/DungtseCS/" target="_blank" class="explore-link">Explore More</a>
+            </div>
+            <div class="school">
+              <img src="images/jigme.jpg" alt="Jigme Sherubling CS">
+              <h3>Jigme Sherubling Central School</h3>
+              <p>I gained confidence in academics and took part in co-curricular activities (11-12).</p>
+              <a href="https://www.facebook.com/jigsher.edu.bt/" target="_blank" class="explore-link">Explore More</a>
+            </div>
+            <div class="school">
+              <img src="images/samtse_college.jpg" alt="Samtse College of Education">
+              <h3>Samtse College of Education</h3>
+              <p>Currently pursuing higher studies to prepare myself as an ICT educator (3rd year).</p>
+              <a href="https://www.sce.edu.bt/" target="_blank" class="explore-link">Explore More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" style="background-image:url('images/skills_bg.jpg');">
+      <div class="overlay">
+        <div class="card">
+          <h2>Skills</h2>
+          <div class="skills-icons">
+            <div>
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <p class="skill-desc">Experienced in writing clean, functional Python code for projects and automation.</p>
+            </div>
+            <div>
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+                <p class="skill-desc">Skilled in creating semantic and responsive web pages using HTML5.</p>
+            </div>
+            <div>
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+                <p class="skill-desc">Designing visually appealing layouts and animations with CSS3.</p>
+            </div>
+            <div>
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+                <p class="skill-desc">Knowledge of Java fundamentals and object-oriented programming.</p>
+            </div>
+            <div>
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+                <p class="skill-desc">Database management, queries, and integration with applications.</p>
+            </div>
+            <div>
+                <img src="images/capcut.png" alt="CapCut" style="width:70px; height:70px; object-fit:contain;">
+                <span>CapCut</span>
+                <p class="skill-desc">Video editing and creative content creation with CapCut.</p>
+            </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" style="background-image:url('images/projects_bg.jpg');">
+      <div class="overlay">
+        <div class="card">
+          <h2>Projects</h2>
+          <div class="projects-frame">
+            <div class="project">
+                <img src="images/water.jpg" class="circle-img" alt="Water Level Indicator">
+                <span>Water Level Indicator</span>
+                <p class="project-desc" id="about">
+                    During 2nd semester, I worked on an exciting project called the 'Water Level Indicator. Device is especially useful for flood-prone areas, as it automatically triggers an alarm when water levels rise,
+                    <span class="more-text" style="display:none;">
+                        helping to prevent potential hazards.
+                    </span>
+                </p>
+<button class="see-more-btn" onclick="toggleSeeMore('about', this)">See More</button>
+
+            </div>
+            <div class="project">
+                <img src="images/blender.jpg" class="circle-img" alt="Blender Animation">
+                <span>Blender Animation</span>
+                <p class="project-desc">Currently, I’m working on my own project fueled by my passion for animation. Using Blender software, I create and animate basic figures, and I’m now able to design characters and add vibrant colors to bring them to life.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background-image:url('images/contact_bg.jpg');">
+      <div class="overlay">
+        <div class="card">
+          <h2>Contact Me</h2>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="email-text">You can also contact me through:</p>
+          <a href="mailto:sonam123@gmail.com" class="email-link"><i class="fas fa-envelope"></i> sonam123@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

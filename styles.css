@@ -1,0 +1,80 @@
+/* Reset & basics */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
+body { display:flex; height:100vh; overflow:hidden; background:#fff; transition: background 0.3s; }
+.section { display:none; height:100%; background-size:cover; background-position:center; position:relative; }
+.section.active { display:block; }
+
+/* Sidebar */
+.sidebar { width:250px; background:#1b1b1b; color:#fff; display:flex; flex-direction:column; padding:20px; z-index:10; transition: background 0.3s; }
+.nav-item { position:relative; margin-bottom:20px; cursor:pointer; overflow:hidden; border-radius:8px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.nav-item:hover { transform: scale(1.05); box-shadow:0 4px 15px rgba(0,0,0,0.3); }
+.nav-item span { position:relative; padding:10px 20px; z-index:2; font-weight:600; display:block; }
+.progress { position:absolute; top:0; left:0; height:100%; width:0; border-radius:8px; z-index:1; transition: width 0.5s ease; }
+
+/* Main */
+.main-content { flex:1; overflow-y:auto; }
+
+/* Overlay for readability */
+.overlay, .overlay-education { padding:50px; display:flex; flex-direction:column; justify-content:center; align-items:center; transition: background 0.3s, color 0.3s; }
+
+/* Card */
+.card { background: #ddd4d4; border:2px solid #dedbdb; padding:40px; border-radius:20px; max-width:900px; margin:auto; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.15); }
+
+/* About */
+.about-flex { display:flex; align-items:center; gap:40px; }
+.about-img img.circle-img { width:150px; height:150px; border-radius:50%; object-fit:cover; }
+.about-text { flex:1; }
+.see-more-btn { margin-top:10px; padding:5px 10px; cursor:pointer; border:none; border-radius:5px; background:#FF6B6B; color:#fff; transition: background 0.3s; }
+.see-more-btn:hover { background:#ff8787; }
+
+/* Education */
+.education-container { display:flex; justify-content:space-around; flex-wrap:wrap; gap:30px; margin-top:30px; }
+.school { width:220px; text-align:center; }
+.school img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #000; margin-bottom:10px; }
+.school h3 { font-size:18px; margin:10px 0 5px; color:#222; }
+.school p { font-size:14px; color:#444; }
+.explore-link { display:block; margin-top:5px; color:#FF6B6B; text-decoration:none; }
+.explore-link:hover { text-decoration:underline; }
+
+/* Skills */
+.skills-icons { display:flex; justify-content:space-around; flex-wrap:wrap; gap:30px; margin-top:20px; }
+.skills-icons div { text-align:center; }
+.skills-icons i { font-size:3rem; color:#000; margin-bottom:10px; }
+.skills-icons span { display:block; font-weight:600; }
+
+/* Projects */
+.projects-frame { display:flex; justify-content:center; gap:40px; margin-top:20px; }
+.project { text-align:center; }
+.project img.circle-img { width:120px; height:120px; border-radius:50%; object-fit:cover; }
+.project span { display:block; margin-top:10px; font-weight:600; }
+
+/* Contact */
+.social-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; }
+.social-icons a { font-size:2rem; color:#000; transition:transform 0.3s; }
+.social-icons a:hover { transform:scale(1.2); }
+
+/* Home overlay */
+.home-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; text-align:center; padding:20px; }
+.home-overlay h1 { font-family:'Montserrat',sans-serif; font-weight:900; font-size:2.5rem; margin-bottom:20px; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+.home-overlay p { font-size:1.2rem; margin-bottom:20px; text-shadow: 1px 1px 6px rgba(0,0,0,0.7); }
+
+/* Dark mode only for sidebar & cards */
+.dark-mode .sidebar { background:#222; color:#fff; }
+.dark-mode .card { background:#333; color:#fff; border-color:#555; }
+.dark-mode .skills-icons i, .dark-mode .skills-icons span { color:#fff; }
+.dark-mode .social-icons a { color:#fff; }
+
+/* Mode button */
+.mode-btn { position:absolute; top:20px; right:20px; padding:10px 15px; cursor:pointer; border:none; border-radius:5px; background:#FF6B6B; color:#fff; z-index:50; transition: background 0.3s; }
+.mode-btn:hover { background:#ff8787; }
+
+/* Responsive */
+@media (max-width:768px){
+  body{flex-direction:column;}
+  .sidebar{width:100%; flex-direction:row; overflow-x:auto;}
+  .nav-item{margin-right:15px;}
+  .main-content{flex:unset; height:calc(100vh - 80px);}
+  .about-flex{flex-direction:column; text-align:center;}
+}
+
