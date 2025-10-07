@@ -51,7 +51,7 @@ body { display:flex; height:100vh; overflow:hidden; background:#fff; transition:
 
 /* Contact */
 .social-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; }
-.social-icons a { font-size:2rem; color:#000; transition:transform 0.3s; }
+.social-icons a { font-size:2.5rem; color:#000; transition:transform 0.3s; }
 .social-icons a:hover { transform:scale(1.2); }
 
 /* Home overlay */
@@ -77,4 +77,65 @@ body { display:flex; height:100vh; overflow:hidden; background:#fff; transition:
   .main-content{flex:unset; height:calc(100vh - 80px);}
   .about-flex{flex-direction:column; text-align:center;}
 }
+
+.skill-message-section {
+  margin-top: 30px; /* space from previous content */
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-message-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.skill-message-section input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.send-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.send-btn i {
+  margin-right: 8px;
+  color: #fff;
+}
+
+.send-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.message-sent {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #4CAF50;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-10px);
+}
+
+.message-sent.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 

@@ -33,11 +33,10 @@ modeBtn.addEventListener("click", () => {
   }
 });
 
-// See more toggle
-function toggleSeeMore(section){
-  const aboutText = document.getElementById("about-text");
+function toggleSeeMore(id, btn){
+  const aboutText = document.getElementById(id);
   const more = aboutText.querySelector(".more-text");
-  const btn = aboutText.nextElementSibling;
+  
   if(more.style.display === "none"){
     more.style.display = "inline";
     btn.textContent = "See Less";
@@ -46,6 +45,7 @@ function toggleSeeMore(section){
     btn.textContent = "See More";
   }
 }
+
 
 
 function toggleSeeMore(id, btn) {
@@ -60,4 +60,36 @@ function toggleSeeMore(id, btn) {
         btn.textContent = "See More";
     }
 }
+
+function toggleSeeMore(id, btn) {
+    const desc = document.getElementById(id);
+    const moreText = desc.querySelector(".more-text");
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline"; // or "block"
+        btn.textContent = "See Less";
+    } else {
+        moreText.style.display = "none";
+        btn.textContent = "See More";
+    }
+}
+
+
+document.getElementById("skillForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Here you can integrate email sending (e.g., EmailJS or backend)
+  // For now, we just show the animation
+  const messageDiv = document.querySelector(".skill-message-section .message-sent");
+  messageDiv.classList.add("show");
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    messageDiv.classList.remove("show");
+  }, 3000);
+
+  // Clear form fields
+  this.reset();
+});
+
 

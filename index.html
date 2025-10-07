@@ -59,13 +59,18 @@
           </div>
           <div class="about-text">
             <h1>About Me</h1>
-            <p style="font-size:14px;" id="about-text">Hi, my name is Sonam, and I come from the tranquil village of Sakteng in Trashigang, a place where nature’s 
+            <p class="project-desc" id="blender">
+                Hi, my name is Sonam, and I come from the tranquil village of Sakteng in Trashigang, a place where nature’s 
                 beauty feels woven into every corner of life. From an early age, I have been drawn to activities that allow me to connect with 
                 the world around me like trekking through lush trails, capturing moments and emotions through drawing, and traveling to new places to experience diverse cultures and landscapes. 
-                <span class="more-text" style="display:none;">These passions are not just hobbies; they are ways for me to understand myself better and to reflect on life from different perspectives. 
+                <span class="more-text" style="display:none;">
+                    These passions are not just hobbies; they are ways for me to understand myself better and to reflect on life from different perspectives. 
                     I am deeply motivated by the idea of finding inner peace and clarity, often seeking solace in the quiet moments of solo journeys through nature. For me, these explorations are more than adventures, 
-                    they are paths to stillness, self-discovery, and freedom from the relentless pace of modern life.</span></p>
-            <button class="see-more-btn" onclick="toggleSeeMore('about')">See More</button>
+                    they are paths to stillness, self-discovery, and freedom from the relentless pace of modern life.
+                </span>
+            </p>
+            <button class="see-more-btn" onclick="toggleSeeMore('blender', this)">See More</button>
+
           </div>
         </div>
       </div>
@@ -143,7 +148,19 @@
                 <p class="skill-desc">Video editing and creative content creation with CapCut.</p>
             </div>
             </div>
-
+            
+            <div class="skill-message-section">
+                <h3>Want to learn these skills from me?</h3>
+                <form id="skillForm">
+                    <input type="text" id="userName" placeholder="Your Name" required>
+                    <input type="text" id="userSkill" placeholder="Skill You Want to Learn" required>
+                    <input type="text" id="userContact" placeholder="Your Contact No." required>
+                    <button type="submit" class="send-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div class="message-sent">Message Sent!</div>
+            </div>
         </div>
       </div>
     </section>
@@ -169,8 +186,13 @@
             <div class="project">
                 <img src="images/blender.jpg" class="circle-img" alt="Blender Animation">
                 <span>Blender Animation</span>
-                <p class="project-desc">Currently, I’m working on my own project fueled by my passion for animation. Using Blender software, I create and animate basic figures, and I’m now able to design characters and add vibrant colors to bring them to life.</p>
-            </div>
+                <p class="project-desc" id="blender">
+                    Currently, I’m working on my own project fueled by my passion for animation. Using Blender software, I create and animate basic figures, and I’m now able to design characters and add
+                    <span class="more-text" style="display:none;">
+                        vibrant colors to bring them to life.
+                    </span>
+                </p>
+                <button class="see-more-btn" onclick="toggleSeeMore('blender', this)">See More</button>
         </div>
       </div>
     </section>
@@ -179,7 +201,7 @@
     <section id="contact" class="section" style="background-image:url('images/contact_bg.jpg');">
       <div class="overlay">
         <div class="card">
-          <h2>Contact Me</h2>
+          <h2>Contact Me on:</h2>
           <div class="social-icons">
             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -187,6 +209,10 @@
             <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
             <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
           </div>
+
+          <br> 
+          <br> 
+
           <p class="email-text">You can also contact me through:</p>
           <a href="mailto:sonam123@gmail.com" class="email-link"><i class="fas fa-envelope"></i> sonam123@gmail.com</a>
         </div>
